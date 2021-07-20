@@ -32,6 +32,10 @@ body {
 
 body {
   background-color: var(--clr-bg-main);
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
 }
 
 .content__heading {
@@ -56,6 +60,13 @@ body {
 
 .cotnent__stats {
   font-family: 'Inter', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .cotnent__stats .stat .stat__count {
@@ -76,10 +87,6 @@ body {
 section {
   max-width: 90%;
   background-color: var(--clr-bg-card);
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
   border-radius: .5rem;
   overflow: hidden;
   text-align: center;
@@ -114,7 +121,7 @@ section .content .cotnent__stats .stat {
   margin-bottom: 1em;
 }
 
-@media only screen and (min-width: 550px) {
+@media only screen and (min-width: 750px) {
   section {
     max-width: 1440px;
     width: 80%;
@@ -129,6 +136,20 @@ section .content .cotnent__stats .stat {
   }
   section .content {
     width: 50%;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  section .content .cotnent__stats {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  section .content .cotnent__stats .stat {
+    margin-bottom: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
